@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-#ruby '2.0.0'
+ruby '2.0.0'
 gem 'rails', '4.0.0.rc1'
 
 # Bundle edge Rails instead:
@@ -37,7 +37,6 @@ gem 'stripe_event'
 gem 'pg'
 gem 'puma'
 gem 'rails_12factor'
-
 
 #gem 'client_side_validations'
 
