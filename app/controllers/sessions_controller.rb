@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   before_filter :user_loged_in, :except => [:new, :create]
+  layout 'new_application'
   def new
   end
   
@@ -15,7 +16,7 @@ class SessionsController < ApplicationController
       redirect_to root_url, :notice => "Logged in!"
     else
       flash[:notice] = "Email or password is invalid"
-      render "new",  :layout => 'new_application'
+      render "new"
     end
   end
   
