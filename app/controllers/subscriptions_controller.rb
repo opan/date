@@ -1,7 +1,7 @@
 class SubscriptionsController < ApplicationController
   
   def new
-    plan_id = params[:plan_id] || 1
+    plan_id = params[:plan_id] || 12
     plan = Plan.find(plan_id)
     @subscription = plan.subscriptions.build
     if params[:PayerID]
