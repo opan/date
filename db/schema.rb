@@ -91,13 +91,7 @@ ActiveRecord::Schema.define(version: 20150728030707) do
 
   add_index "letsgos", ["user_id", "created_at"], name: "index_letsgos_on_user_id_and_created_at", using: :btree
 
-  create_table "locations", force: true do |t|
-    t.string "zip_code"
-    t.string "city"
-    t.string "state"
-    t.float  "latitude"
-    t.float  "longitude"
-  end
+
 
   create_table "mail_campaign_attachments", force: true do |t|
     t.integer  "mail_campaign_id",              null: false
