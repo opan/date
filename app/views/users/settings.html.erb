@@ -75,7 +75,7 @@
 		<div id="subscription">
 		  <h1>Your Subscription</h1>
 		  <% if @user.subscription.present? %>
-			<p>You are signed up for the <strong><%= @user.subscription.plan.name %></strong> plan which includes <strong><%= @user.subscription.plan.length %>  months</strong> for just <strong><%= number_to_currency @user.subscription.plan.price %></strong> per month! You have <%=distance_of_time_in_words(Time.now, @user.subscription.expires_at) %> until it expires!</p>
+			<p>You are signed up for the <strong><%= @user.subscription.plan.name %></strong> plan which includes <strong><%= @user.subscription.plan.length %>  days</strong> for just <strong><%= number_to_currency @user.subscription.plan.price %></strong>! You have <%=distance_of_time_in_words(Time.now, @user.subscription.expires_at) %> until your subscription expires!</p>
 		  <% end %>
 		</div>
 		
@@ -87,7 +87,7 @@
 	<p>
 		<% if @user.subscription.present? and @user.subscription.paypal_recurring_profile_token.nil? %>
 		
-		<p>Add new Credit Card</p>
+		<p>Add a new Credit Card</p>
 		<%= form_for @user do |f| %>
 		  <% if @user.errors.any? %>
 		    <div class="error_messages">
@@ -145,7 +145,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="field"><%= f.submit "Subscribe", class: 'btn', style: "width: 40%; margin-left: 165px"  %></div>
+        <div class="field"><%= f.submit "Update Card", class: 'btn', style: "width: 40%; margin-left: 165px"  %></div>
       </div>
 		  </div>
 		<% end %>
