@@ -101,3 +101,5 @@ end
   gem 'carrierwave-aws'
   gem 'carrierwave-imageoptimizer'
   gem 'carrierwave_backgrounder'
+  gem 'redis'
+  
