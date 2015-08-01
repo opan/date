@@ -76,7 +76,7 @@ end
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by_username(:username)
     @question = @user.questions.where("answer is not null").order("created_at DESC").page(params[:page]).per_page(3)
     @letsgos = @user.letsgos.paginate(page: params[:page], :per_page => 3)
     @letsgo = current_user.letsgos.build
