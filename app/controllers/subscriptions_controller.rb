@@ -91,7 +91,7 @@ class SubscriptionsController < ApplicationController
              @user = current_user
              @user.subscription.suspend_paypal
              current_user.subscription.update_attributes(:cancelled => 1)
-               flash.alert = 'Billing has been suspended!'
+               flash.alert = 'Subscription has been cancelled!'
                 redirect_to root_url
            end
 
@@ -99,7 +99,7 @@ class SubscriptionsController < ApplicationController
              @user = current_user
              @user.subscription.reactivate_paypal
              current_user.subscription.update_attributes(:cancelled => nil)
-               flash.alert = 'Billing has been activated!'
+               flash.alert = 'Subscription has been activated!'
                 redirect_to root_url
            end
          
@@ -118,7 +118,7 @@ class SubscriptionsController < ApplicationController
                    cvc:       params[:cvc]
                  }
                  if @user.subscription.update_card(@subscriber, card_info)
-                   flash.alert = 'Saved. Your card information has been updated.'
+                   flash.alert = 'Saved. Your credit card information has been updated.'
                    redirect_to root_url
                  else
                    flash.alert = 'Stripe reported an error while updating your card. Please try again.'
