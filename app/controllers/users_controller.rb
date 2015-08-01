@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_filter :user_loged_in, :except => [:index, :new, :create, :terms_of_use, :privacy_policy, :faq]
   respond_to :html, :json
   layout 'new_application'
   
