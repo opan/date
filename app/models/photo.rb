@@ -24,7 +24,7 @@ class Photo < ActiveRecord::Base
   def validate_photo_quota
     return unless self.user
     if self.user.photos(:reload).count >= LIMIT
-      errors.add(:base, "Your Photo upload quota exceeded. Delete existing photo to upload new.")
+      errors.add(:base, "You exceeded the photo upload quota. Delete existing photo to upload new photo.")
     end
   end
 end
