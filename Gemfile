@@ -38,7 +38,6 @@ gem 'pg'
 gem 'puma'
 gem 'rails_12factor'
 
-
 #gem 'client_side_validations'
 
 
@@ -100,5 +99,3 @@ end
   gem "non-stupid-digest-assets"
   gem 'carrierwave-aws'
   gem 'carrierwave-imageoptimizer'
-  gem 'redis'
-  

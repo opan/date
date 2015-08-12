@@ -414,7 +414,6 @@ DEPENDENCIES
   rails-observers
   rails_12factor
   rb-fsevent
-  redis
   rmagick
   roadie
   rspec-rails
