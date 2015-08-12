@@ -138,16 +138,14 @@ class User < ActiveRecord::Base
             nil
         end
     end
-  def location
+    def location
 
-      if Location.by_zip_code(self.zip_code.to_s).any?
-          # you can return all here if you want more than one
-          # for testing just returning the first one
-          return Location.by_zip_code(self.zip_code.to_s).first
-      else
-          return nil
-      end
-  end
+        if Location.by_zip_code(self.zip_code.to_s).any?
+            return Location.by_zip_code(self.zip_code.to_s).first
+        else
+            return nil
+        end
+    end
   
   def address
     "#{location.city}, #{location.state}" rescue nil
