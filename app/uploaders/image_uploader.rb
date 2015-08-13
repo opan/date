@@ -4,7 +4,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::ImageOptimizer
+  include CarrierWave::ImageOptimizer
   include CarrierWave::MiniMagick
   
 
@@ -34,7 +34,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Process files as they are uploaded:
   #process :scale => [200, 300]
   process :auto_orient
-  #process optimize: [{ quality: 60 }]
+  process :optimize
 
   #
   # def scale(width, height)
