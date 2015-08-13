@@ -4,8 +4,9 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  include CarrierWave::ImageOptimizer
+  # include CarrierWave::ImageOptimizer
   include CarrierWave::MiniMagick
+  include ::CarrierWave::Backgrounder::Delay
   
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
@@ -34,7 +35,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Process files as they are uploaded:
   #process :scale => [200, 300]
   process :auto_orient
-  process optimize:
+  # process optimize: [{ quality: 60 }]
 
   #
   # def scale(width, height)
