@@ -132,9 +132,12 @@ class User < ActiveRecord::Base
     end
     
     def mailboxer_email(object)
-     email
+        if self.no_email
+          email
+        else
+            nil
+        end
     end
-    
     def location
 
         if Location.by_zip_code(self.zip_code.to_s).any?
