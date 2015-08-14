@@ -54,7 +54,7 @@ Subscription Statistics
 		
 		
 		  </tr>
-		  <% @users.sort_by {|user| User.subscription.created_at}.reverse.each do |user| %>
+		  <% @users.sort_by {|user| User.Subscription.created_at}.reverse.each do |user| %>
 		    <tr>
 		      <td><%= user.subscription.id %></td>
 		      <td><%= link_to user.username, user %></td>
