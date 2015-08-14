@@ -94,11 +94,11 @@ class User < ActiveRecord::Base
   end
   
   def self.total_males
-    where(gender: 'male').count
+    where(gender: 'Male').count
   end
   
   def self.total_females
-    where(gender: 'female').count
+    where(gender: 'Female').count
   end
   
   def self.total_male_messages
