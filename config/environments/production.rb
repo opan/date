@@ -69,8 +69,8 @@ Dating::Application.configure do
   config.action_mailer.delivery_method = :smtp
    config.action_mailer.default_url_options = { :host => 'areyoutaken.com' }
    config.action_mailer.smtp_settings = {
-     address:              'crikey.lunarbreeze.com',
-     port:                 465,
+     address:              'mail.areyoutaken.com',
+     port:                 587,
      domain:               'areyoutaken.com',
      user_name:            'yo@areyoutaken.com',
      password:             'Series1234',
