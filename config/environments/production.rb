@@ -73,7 +73,7 @@ Dating::Application.configure do
      port:                 465,
      domain:               'areyoutaken.com',
      user_name:            'yo@areyoutaken.com',
-     password:             'series2k',
+     password:             'Series1234',
      authentication:       'plain',
      enable_starttls_auto: false  }
 
