@@ -67,10 +67,10 @@ Dating::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   config.action_mailer.delivery_method = :smtp
-   config.action_mailer.default_url_options = { :host => 'areyoutaken.com' }
+   config.action_mailer.default_url_options = { :host => 'crikey.lunarbreeze.com' }
    config.action_mailer.smtp_settings = {
-     address:              'mail.areyoutaken.com',
-     port:                 587,
+     address:              'crikey.lunarbreeze.com',
+     port:                 465,
      domain:               'areyoutaken.com',
      user_name:            'yo@areyoutaken.com',
      password:             'Series1234',
@@ -78,6 +78,6 @@ Dating::Application.configure do
      enable_starttls_auto: false  }
 
     config.action_mailer.perform_deliveries = true
-    config.action_mailer.default_url_options = { :host => "areyoutaken.com" }
+    config.action_mailer.default_url_options = { :host => "crikey.lunarbreeze.com" }
     
 end
