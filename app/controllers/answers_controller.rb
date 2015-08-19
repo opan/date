@@ -49,7 +49,7 @@ class AnswersController < ApplicationController
     if params["facebook"]
       begin
         access_token = AccessToken.find_by_user_id_and_social_network(current_user.id, 'F')
-        api = Koala::Facebook::API.new(access_token)
+        api = Koala::Facebook::API.new(access_token.access_token)
         post_details = {
                         :name => @question.question,
                         :picture => "http://ask.fm/images/155x155.png",
