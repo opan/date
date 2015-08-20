@@ -20210,8 +20210,8 @@ function deleteMsg(id){
 
 $( document ).ready(function() {
 	$("abbr.timeago").timeago();
-	window.asd = $('.SlectBox#relegion').SumoSelect({ 
-			placeholder: 'Relegion',
+	window.asd = $('.SlectBox#religion').SumoSelect({ 
+			placeholder: 'religion',
 			csvDispCount: 3 
 		});
 		
