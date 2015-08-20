@@ -63,7 +63,7 @@
         
                   .select5
                       - religion = @search.religion.present? ? @search.religion.split(',') : nil
-					  = select_tag :religion, options_for_select(['Agnostic', 'Atheist', 'Christian', 'Catholic', 'Buddhist', 'Hindu', 'Jewish', 'Muslim', 'Other'], religion), multiple: true, class: "SlectBox", id: "Religion"
+					  = select_tag :religion, options_for_select(['Agnostic', 'Atheist', 'Christian', 'Catholic', 'Buddhist', 'Hindu', 'Jewish', 'Muslim', 'Other'], religion), multiple: true, class: "SlectBox", id: "religion"
 					  input.adv_text_input name='search' type="hidden" value="#{@search.input_text}"
                       
                 .btm_sec style='margin-top:20px;'

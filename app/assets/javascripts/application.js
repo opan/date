@@ -110,7 +110,7 @@ function deleteMsg(id){
 $( document ).ready(function() {
 	$("abbr.timeago").timeago();
 	window.asd = $('.SlectBox#religion').SumoSelect({ 
-			placeholder: 'religion',
+			placeholder: 'Religion',
 			csvDispCount: 3 
 		});
 		
