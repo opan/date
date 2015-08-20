@@ -46,7 +46,7 @@
                 - else
                   = @user.ethnicity
             h4
-              | Religion: 
+              | religion: 
               span.color
                 - if current_user.admin? or current_user == @user
                   = best_in_place @user, :religion, nil: 'What is your faith?', :type => :select, :collection => [["Agnostic", "Agnostic"], ["Atheist", "Atheist"], ["Christian", "Christian"], ["Catholic", "Catholic"], ["Buddhist", "Buddhist"], ["Hindu", "Hindu"], ["Jewish", "Jewish"], ["Muslim", "Muslim"], ["Spiritual without affiliation", "Spiritual without affiliation"], ["Other", "Other"], ["None", "None"], ["Prefer not to say", "Prefer not to say"]]
