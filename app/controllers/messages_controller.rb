@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
    # POST /message/create
   def create
     @recipient = User.find(params[:user])
-    current_user.send_message(@recipient, params[:body], params[:subject])
+    MessageWorker.perform_async(current_user.id, @recipient.id, params[:body], params[:subject])
     flash[:notice] = "Message has been sent!"
     if request.xhr?
 		render :json => {:notice => flash[:notice]}
